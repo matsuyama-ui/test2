@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "icon";
+
+// #clearfix
+@mixin clearfix {
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    content: '.';
+  }
+}
+
+// web fontを使う場合
+@mixin icon_ {
+  font-family: "icomoon" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// sp
+@mixin sp {
+  @media (max-width: 425px) {
+    @content;
+  }
+}

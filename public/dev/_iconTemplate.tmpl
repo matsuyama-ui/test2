@@ -1,0 +1,40 @@
+<%// このファイルはSCSSファイルを生成するためのテンプレートファイルです。以下の内容はSCSSに変換されて出力されます %>
+// SCSSファイルを直接編集しないでください。SVGファイルを追加すると自動生成されます。
+// 編集する必要がある場合は、テンプレートを編集してください。
+// アイコンフォントを使用するためのmixinが記述されています。
+// 例: module.scssなど
+// *注意* contentには必ず変数を使用してください。(自動採番のため、値が変動します))
+// @import "_icon.scss";
+// .this-is-icon-class {
+//   &:before {
+//     @include icon;
+//     content: $icon-XXX; (XXXはSVGファイル名から拡張子を取り除いた文字)
+//     color: XXX;
+//     font-size: XXX;
+//   }
+// }
+@font-face {
+	font-family: "<%= fontName %>";
+	src: url('<%= fontPath %><%= fontName %>.eot<%= cacheBusterQueryString %>');
+	src: url('<%= fontPath %><%= fontName %>.eot?<%= cacheBuster %>#iefix') format('eot'),
+		url('<%= fontPath %><%= fontName %>.woff2<%= cacheBusterQueryString %>') format('woff2'),
+		url('<%= fontPath %><%= fontName %>.woff<%= cacheBusterQueryString %>') format('woff'),
+		url('<%= fontPath %><%= fontName %>.ttf<%= cacheBusterQueryString %>') format('truetype'),
+		url('<%= fontPath %><%= fontName %>.svg<%= cacheBusterQueryString %>#<%= fontName %>') format('svg');
+}
+
+@mixin <%= cssClass%> {
+  font-family: "<%= fontName %>";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: none;
+  text-transform: none;
+}
+
+<% _.each(glyphs, function(glyph) { %>
+$<%= cssClass%>-<%= glyph.originalFileName ? glyph.originalFileName : glyph.fileName%>: '\<%= glyph.codePoint%>';
+<% }); %>

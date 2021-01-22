@@ -1,0 +1,41 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-once": "^2.1.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-w3c-html-validator": "^1.4.4",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "inquirer": "^6.5.2",
+    "node-sass": "latest",
+    "through": "^2.3.8",
+    "webpack-stream": "^5.2.1"
+  }
+}
